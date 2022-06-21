@@ -3,6 +3,7 @@
 var currentDay = document.getElementById("currentDay");
 currentDay.textContent = moment().format('dddd MMMM Do');
 currentTime = moment().format('HH')
+console.log(currentTime)
 
 
 //Loads users previous saves from local storage
@@ -44,7 +45,7 @@ var timeColors = function() {
         }
 
         //if current time matches time of .task it changes colors to red
-        else if (hourShift === currentTime) {
+        else if (hourShift == currentTime) {
             $(this).removeClass("future");
             $(this).removeClass("past");
             $(this).addClass("present");
